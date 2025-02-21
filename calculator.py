@@ -41,7 +41,7 @@ def vector_input(size):
         print(f"Current cursor position (starting from the top): {cursor}")
         print(f"Current vector cell values: \n{np.array(line)}")
         response = input("Input the cell value, use the W and S keys to move the cursor or type either 'quit' or 'exit' to finish inputting values\n")
-        match responce.lower():
+        match response.lower():
             case "quit" | "exit":
                 break
 
