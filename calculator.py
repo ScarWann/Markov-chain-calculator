@@ -10,8 +10,8 @@ def matrix_input(size):
     while True:
         print(f"Current cursor position (x-axis and y-axis, starting from the top left corner): {cursor_x, cursor_y}")
         print(f"Current matrix cell values: \n{np.matrix(matrix)}")
-        responce = input("Input the cell value, use the WASD keys to move the cursor or type either 'quit' or 'exit' to finish inputting values\n")
-        match responce.lower():
+        response = input("Input the cell value, use the WASD keys to move the cursor or type either 'quit' or 'exit' to finish inputting values\n")
+        match response.lower():
             case "quit" | "exit":
                 break
 
@@ -40,7 +40,7 @@ def vector_input(size):
     while True:
         print(f"Current cursor position (starting from the top): {cursor}")
         print(f"Current vector cell values: \n{np.array(line)}")
-        responce = input("Input the cell value, use the W and S keys to move the cursor or type either 'quit' or 'exit' to finish inputting values\n")
+        response = input("Input the cell value, use the W and S keys to move the cursor or type either 'quit' or 'exit' to finish inputting values\n")
         match responce.lower():
             case "quit" | "exit":
                 break
@@ -53,7 +53,7 @@ def vector_input(size):
 
             case _:
                 try:
-                    line[cursor][0] = float(responce)
+                    line[cursor][0] = float(response)
                 except:
                     print("Whoops! Something went wrong! You wont have to fill out the matrix again though\n")
     return np.matrix(line)
