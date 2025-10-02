@@ -1,0 +1,1 @@
+A simple CLI program for calculating Markov chain state vectors after n transitions
