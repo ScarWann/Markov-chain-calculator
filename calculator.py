@@ -40,9 +40,9 @@ def edit_matrix(matrix: np.ndarray) -> np.ndarray:
     while not finished:
         print(f"Current cursor position (x-axis and y-axis, starting from the top left corner): {cursor_x, cursor_y}")
         print(f"Current matrix cell values: \n{matrix}")
-        responce = input("Input the cell value, use the WASD keys to move the cursor, and type 'q' to finish inputting values: ")
+        response = input("Input the cell value, use the WASD keys to move the cursor, and type 'q' to finish inputting values: ")
         clear()
-        match responce.lower():
+        match response.lower():
             case "q":
                 finished = True
 
@@ -60,7 +60,7 @@ def edit_matrix(matrix: np.ndarray) -> np.ndarray:
 
             case _:
                 try:
-                    matrix[cursor_y][cursor_x] = float(responce)
+                    matrix[cursor_y][cursor_x] = float(response)
                 except:
                     print("Please enter a float, 0 or 1\n")
 
@@ -82,15 +82,15 @@ def edit_matrix(matrix: np.ndarray) -> np.ndarray:
 def edit_vector(vector: np.ndarray) -> np.ndarray:
     finished = False
     cursor = 0
-    
+
     clear()
 
     while not finished:
         print(f"Current cursor position (starting from the left): {cursor}")
         print(f"Current vector cell values: \n{np.array(vector)}")
-        responce = input("Input the cell value, use the A and D keys to move the cursor or type 'q' to finish inputting values: ")
+        response = input("Input the cell value, use the A and D keys to move the cursor or type 'q' to finish inputting values: ")
         clear()
-        match responce.lower():
+        match response.lower():
             case "q":
                 finished = True
 
@@ -102,7 +102,7 @@ def edit_vector(vector: np.ndarray) -> np.ndarray:
 
             case _:
                 try:
-                    vector[cursor] = np.float64(responce)
+                    vector[cursor] = np.float64(response)
                 except:
                     print("Please enter a float, 0 or 1\n")
         
